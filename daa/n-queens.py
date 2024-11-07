@@ -36,8 +36,9 @@ class NQueens:
             self.count += 1
             self.printBoard()
             return
-        
-        if any(self.board[row]):  # Skip row if a queen is already placed
+
+        # Skip the row where the first queen is placed
+        if any(self.board[row]):
             self.solve(row + 1)
             return
 
